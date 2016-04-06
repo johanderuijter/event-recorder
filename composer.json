@@ -1,0 +1,41 @@
+{
+    "name": "jdr/event-recorder",
+    "type": "library",
+    "description": "Record events to be dipatched later",
+    "keywords": [
+        "jdr",
+        "event-recorder"
+    ],
+    "homepage": "https://github.com/johanderuijter/event-recorder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Johan de Ruijter",
+            "email": "dev@johanderuijter.nl",
+            "homepage": "http://johanderuijter.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~7.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JDR\\EventRecorder\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "bin/phpspec run"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}

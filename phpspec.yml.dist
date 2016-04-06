@@ -1,0 +1,4 @@
+suites:
+    event-recorder:
+        namespace: JDR\EventRecorder
+        psr4_prefix: JDR\EventRecorder
