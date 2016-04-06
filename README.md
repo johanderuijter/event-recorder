@@ -16,7 +16,7 @@ $ composer require jdr/event-recorder
 
 ## Usage
 
-To start recording domain events, just use the `EventRecorderCapabilities` trait. Optionally, you can implement the `ContainsRecordedEvents` interface.
+To start recording domain events, implement the `ContainsRecordedEvents` interface. Optionally, you can use the `EventRecorderCapabilities` trait.
 
 ``` php
 <?php
@@ -36,6 +36,13 @@ class Entity implements ContainsRecordedEvents
         $this->record(new SomethingHappened());
     }
 }
+
+$entity = new Entity();
+$entity->doSomething();
+
+// ...
+
+$events = $entity->releaseEvents();
 ```
 
 This package also contains a public event recorder.
